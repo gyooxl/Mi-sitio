@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios de Archivos e Impresión en Windows Server</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__brand">
+        <svg class="header__logo" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+          <rect x="4" y="8" width="18" height="18" rx="2" fill="#0077cc"/>
+          <rect x="26" y="8" width="18" height="18" rx="2" fill="#2ecc71"/>
+          <rect x="4" y="30" width="18" height="10" rx="2" fill="#333333"/>
+          <rect x="26" y="30" width="18" height="10" rx="2" fill="#0077cc"/>
+        </svg>
+        <div class="header__text">
+          <p class="header__eyebrow">COM22 · Producción Multimedial</p>
+          <h1 class="header__title">Servicios de Archivos e Impresión en Windows Server</h1>
+        </div>
+      </div>
+      <div class="header__meta">
+        <span class="header__student">Gyoribeth Montenegro</span>
+        <span class="header__divider">·</span>
+        <span class="header__program">Mantenimiento de Sistemas Informáticos</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== SECCIÓN DE PRESENTACIÓN ===== -->
+    <section class="presentation">
+      <figure class="presentation__figure">
+        <svg viewBox="0 0 800 450" class="server-svg" role="img" aria-labelledby="serverTitle serverDesc">
+          <title id="serverTitle">Servidor Windows Server compartiendo archivos e impresora en red</title>
+          <desc id="serverDesc">Ilustración de un servidor central conectado a varios equipos cliente y a una impresora de red.</desc>
+          <rect width="800" height="450" fill="#f5f5f5"/>
+
+          <!-- Servidor central -->
+          <g transform="translate(340,150)">
+            <rect x="0" y="0" width="120" height="140" rx="8" fill="#0077cc"/>
+            <rect x="14" y="16" width="92" height="14" rx="3" fill="#ffffff" opacity="0.9"/>
+            <rect x="14" y="38" width="92" height="14" rx="3" fill="#ffffff" opacity="0.9"/>
+            <rect x="14" y="60" width="92" height="14" rx="3" fill="#ffffff" opacity="0.9"/>
+            <circle cx="26" cy="100" r="5" fill="#2ecc71"/>
+            <circle cx="42" cy="100" r="5" fill="#2ecc71"/>
+            <text x="60" y="160" text-anchor="middle" class="svg-label">Windows Server</text>
+          </g>
+
+          <!-- Carpeta compartida -->
+          <g transform="translate(100,80)">
+            <path d="M0 20 h35 l10 -12 h55 v90 h-100 z" fill="#333333"/>
+            <text x="50" y="45" text-anchor="middle" class="svg-label svg-label--light">Archivos</text>
+            <text x="50" y="118" text-anchor="middle" class="svg-label">Carpeta compartida</text>
+          </g>
+
+          <!-- Impresora de red -->
+          <g transform="translate(600,90)">
+            <rect x="0" y="20" width="100" height="60" rx="6" fill="#2ecc71"/>
+            <rect x="16" y="0" width="68" height="24" rx="3" fill="#333333"/>
+            <rect x="20" y="80" width="60" height="26" fill="#ffffff" stroke="#cccccc"/>
+            <text x="50" y="122" text-anchor="middle" class="svg-label">Impresora de red</text>
+          </g>
+
+          <!-- Equipos cliente -->
+          <g transform="translate(120,300)">
+            <rect x="0" y="0" width="70" height="46" rx="4" fill="#ffffff" stroke="#333333"/>
+            <rect x="25" y="46" width="20" height="8" fill="#333333"/>
+            <text x="35" y="72" text-anchor="middle" class="svg-label">Cliente A</text>
+          </g>
+          <g transform="translate(370,320)">
+            <rect x="0" y="0" width="70" height="46" rx="4" fill="#ffffff" stroke="#333333"/>
+            <rect x="25" y="46" width="20" height="8" fill="#333333"/>
+            <text x="35" y="72" text-anchor="middle" class="svg-label">Cliente B</text>
+          </g>
+          <g transform="translate(610,300)">
+            <rect x="0" y="0" width="70" height="46" rx="4" fill="#ffffff" stroke="#333333"/>
+            <rect x="25" y="46" width="20" height="8" fill="#333333"/>
+            <text x="35" y="72" text-anchor="middle" class="svg-label">Cliente C</text>
+          </g>
+
+          <!-- Conexiones -->
+          <line x1="200" y1="150" x2="360" y2="220" class="link-line"/>
+          <line x1="640" y1="150" x2="440" y2="200" class="link-line"/>
+          <line x1="155" y1="300" x2="360" y2="260" class="link-line"/>
+          <line x1="405" y1="320" x2="400" y2="290" class="link-line"/>
+          <line x1="645" y1="300" x2="450" y2="260" class="link-line"/>
+        </svg>
+        <figcaption>El servidor centraliza el acceso a carpetas compartidas y a la impresora, controlando quién puede leer, escribir o imprimir.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== INTRODUCCIÓN ===== -->
+    <section class="content-section">
+      <span class="section-eyebrow">Introducción</span>
+      <h2>¿Qué son y por qué son importantes?</h2>
+      <p>Los <strong>servicios de archivos e impresión</strong> son roles de <strong>Windows Server</strong> que permiten centralizar el almacenamiento de información y la gestión de impresoras dentro de una red corporativa. En lugar de que cada equipo guarde sus propios archivos o tenga una impresora conectada de forma individual, el servidor concentra estos recursos y controla quién puede acceder a ellos y de qué forma.</p>
+      <p>Su importancia radica en la organización y la seguridad: una empresa con decenas o cientos de equipos necesita que la información esté centralizada, respaldada y protegida con permisos claros. Sin estos servicios, cada usuario administraría sus propios recursos de forma aislada, lo que generaría duplicidad de archivos, pérdida de control sobre quién modifica qué, y un uso ineficiente de las impresoras disponibles. Por eso, el rol de <strong>Servicios de archivos y almacenamiento</strong> junto al de <strong>Impresión y documentos</strong> es uno de los pilares de la administración de redes en entornos Windows.</p>
+    </section>
+
+    <!-- ===== DESARROLLO / CONTENIDO ===== -->
+    <section class="content-section">
+      <span class="section-eyebrow">Desarrollo</span>
+      <h2>Funcionamiento, conceptos clave y componentes</h2>
+
+      <h3>Cómo funciona el servicio de archivos</h3>
+      <p>El administrador instala el rol <strong>File and Storage Services</strong> desde el Administrador del servidor, crea una carpeta en el disco y la comparte en red asignando un nombre visible. Después define <strong>permisos de recurso compartido</strong> (a nivel de red) y <strong>permisos NTFS</strong> (a nivel del sistema de archivos), que juntos determinan qué usuarios o grupos pueden leer, escribir o modificar cada carpeta. Los usuarios acceden a esos recursos escribiendo una ruta de red (por ejemplo, <code>\\servidor\\documentos</code>) o mediante una unidad de red mapeada.</p>
+
+      <h3>Cómo funciona el servicio de impresión</h3>
+      <p>El rol <strong>Print and Document Services</strong> permite instalar una o varias impresoras físicas en el servidor y compartirlas para que los equipos de la red las usen sin necesidad de un controlador instalado localmente en cada máquina. El servidor recibe los trabajos de impresión en una <strong>cola</strong>, los ordena y los envía a la impresora correspondiente, permitiendo además pausar, cancelar o priorizar impresiones desde un solo punto de administración.</p>
+
+      <h3>Conceptos clave</h3>
+      <table>
+        <thead>
+          <tr><th>Término</th><th>Definición breve</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Recurso compartido (share)</td><td>Carpeta o impresora publicada en la red para que otros equipos accedan a ella.</td></tr>
+          <tr><td>Permisos NTFS</td><td>Reglas de acceso aplicadas directamente sobre archivos y carpetas en el disco.</td></tr>
+          <tr><td>Cuota de disco</td><td>Límite de espacio de almacenamiento asignado a un usuario o carpeta.</td></tr>
+          <tr><td>Cola de impresión</td><td>Lista ordenada de trabajos pendientes que el servidor envía a la impresora.</td></tr>
+          <tr><td>DFS (Distributed File System)</td><td>Servicio que unifica varias carpetas compartidas bajo una sola ruta lógica.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Subtemas principales</h3>
+      <ul>
+        <li><strong>Administración de carpetas compartidas:</strong> creación, permisos, auditoría de acceso.</li>
+        <li><strong>Cuotas y filtrado de archivos:</strong> control del espacio usado y de los tipos de archivo permitidos.</li>
+        <li><strong>DFS (sistema de archivos distribuido):</strong> organiza recursos de varios servidores bajo una sola ruta.</li>
+        <li><strong>Administración de impresoras:</strong> instalación de controladores, colas, prioridades e impresión dirigida por rama (branch office).</li>
+      </ul>
+
+      <h3>Ventajas y desventajas</h3>
+      <div class="pros-cons">
+        <div class="pros-cons__col pros-cons__col--pro">
+          <h4>Ventajas</h4>
+          <ul>
+            <li>Centraliza archivos e impresoras en un solo punto de control.</li>
+            <li>Permite definir permisos detallados por usuario o grupo.</li>
+            <li>Facilita copias de seguridad de toda la información.</li>
+            <li>Reduce la necesidad de instalar drivers en cada equipo.</li>
+          </ul>
+        </div>
+        <div class="pros-cons__col pros-cons__col--con">
+          <h4>Desventajas</h4>
+          <ul>
+            <li>El servidor es un punto único de falla si no hay redundancia.</li>
+            <li>Requiere mantenimiento y licenciamiento de Windows Server.</li>
+            <li>Una mala configuración de permisos puede exponer datos sensibles.</li>
+            <li>El rendimiento depende del hardware y del ancho de banda de red.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Componentes y herramientas principales</h3>
+      <p>Una implementación típica requiere el rol de <strong>File and Storage Services</strong>, el rol de <strong>Print and Document Services</strong>, la consola <strong>Administrador del servidor</strong> para configurarlos, <strong>Active Directory</strong> para gestionar usuarios y grupos, y opcionalmente <strong>DFS</strong> para escalar el almacenamiento entre varios servidores.</p>
+
+      <figure class="content-figure">
+        <svg viewBox="0 0 800 360" class="perms-svg" role="img" aria-labelledby="permsTitle permsDesc">
+          <title id="permsTitle">Niveles de permisos sobre un recurso compartido</title>
+          <desc id="permsDesc">Diagrama que muestra cómo se combinan los permisos de recurso compartido y los permisos NTFS.</desc>
+          <rect width="800" height="360" fill="#ffffff"/>
+          <text x="400" y="40" text-anchor="middle" class="svg-heading">Permisos combinados sobre una carpeta</text>
+
+          <rect x="80" y="90" width="260" height="180" rx="10" fill="#e6f2fb" stroke="#0077cc"/>
+          <text x="210" y="120" text-anchor="middle" class="svg-label" style="font-weight:600">Permisos de recurso compartido</text>
+          <text x="210" y="150" text-anchor="middle" class="svg-small">Se aplican solo por red</text>
+          <text x="210" y="170" text-anchor="middle" class="svg-small">Lectura / Cambio / Control total</text>
+
+          <rect x="460" y="90" width="260" height="180" rx="10" fill="#eafaf1" stroke="#2ecc71"/>
+          <text x="590" y="120" text-anchor="middle" class="svg-label" style="font-weight:600">Permisos NTFS</text>
+          <text x="590" y="150" text-anchor="middle" class="svg-small">Se aplican en el disco local</text>
+          <text x="590" y="170" text-anchor="middle" class="svg-small">Aplican también en acceso local</text>
+
+          <text x="400" y="200" text-anchor="middle" class="svg-heading" style="font-size:22px">+</text>
+          <rect x="300" y="250" width="200" height="60" rx="8" fill="#333333"/>
+          <text x="400" y="285" text-anchor="middle" class="svg-label svg-label--light">Permiso efectivo (el más restrictivo)</text>
+        </svg>
+        <figcaption>El acceso final de un usuario resulta de combinar el permiso de recurso compartido con el permiso NTFS; siempre gana el más restrictivo.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== EJEMPLOS O CASOS PRÁCTICOS ===== -->
+    <section class="content-section">
+      <span class="section-eyebrow">Ejemplos o casos prácticos</span>
+      <h2>Casos reales, ejemplos funcionales y comparaciones</h2>
+
+      <h3>Casos reales</h3>
+      <p>En una oficina administrativa, el departamento de contabilidad puede tener una carpeta compartida a la que solo su equipo accede, mientras que una carpeta general de "Comunicados" es de solo lectura para toda la empresa. En un colegio, el servidor puede centralizar los trabajos de los estudiantes por curso y compartir una sola impresora en red para toda la sala de sistemas, evitando comprar una impresora por cada equipo. En una empresa con varias sedes, DFS permite que los empleados vean una sola carpeta "Proyectos" aunque los archivos realmente estén repartidos en distintos servidores físicos.</p>
+
+      <h3>Ejemplos funcionales</h3>
+      <ul>
+        <li><strong>File Server Resource Manager (FSRM):</strong> herramienta para definir cuotas y filtrar tipos de archivo prohibidos.</li>
+        <li><strong>DFS Namespaces y DFS Replication:</strong> unifican y sincronizan carpetas entre varios servidores.</li>
+        <li><strong>Administrador de impresión (Print Management Console):</strong> gestiona todas las colas de impresión de la red desde un solo lugar.</li>
+        <li><strong>Branch Office Direct Printing:</strong> permite que sucursales impriman directo a la impresora local sin pasar por el servidor central.</li>
+      </ul>
+
+      <h3>Comparación: carpeta local vs. carpeta compartida en servidor</h3>
+      <table>
+        <thead>
+          <tr><th>Aspecto</th><th>Carpeta local en cada PC</th><th>Carpeta compartida en servidor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Control de acceso</td><td>Depende de cada equipo</td><td>Centralizado con permisos NTFS</td></tr>
+          <tr><td>Respaldo</td><td>Manual, por equipo</td><td>Automatizado, un solo punto</td></tr>
+          <tr><td>Colaboración</td><td>Requiere copiar archivos entre usuarios</td><td>Acceso simultáneo desde la red</td></tr>
+          <tr><td>Escalabilidad</td><td>Limitada al disco de cada PC</td><td>Ampliable con DFS y más almacenamiento</td></tr>
+        </tbody>
+      </table>
+
+      <figure class="content-figure">
+        <svg viewBox="0 0 800 300" class="usecase-svg" role="img" aria-labelledby="useTitle useDesc">
+          <title id="useTitle">Escenarios de uso de archivos e impresión en red</title>
+          <desc id="useDesc">Tres escenarios: oficina administrativa, sala de sistemas escolar y empresa con varias sedes.</desc>
+          <rect width="800" height="300" fill="#f5f5f5"/>
+          <g transform="translate(60,50)">
+            <rect width="200" height="180" rx="12" fill="#ffffff" stroke="#e2e2e2"/>
+            <circle cx="100" cy="50" r="26" fill="#0077cc"/>
+            <text x="100" y="100" text-anchor="middle" class="svg-label">Oficina</text>
+            <text x="100" y="120" text-anchor="middle" class="svg-small">Carpetas por departamento</text>
+          </g>
+          <g transform="translate(300,50)">
+            <rect width="200" height="180" rx="12" fill="#ffffff" stroke="#e2e2e2"/>
+            <circle cx="100" cy="50" r="26" fill="#2ecc71"/>
+            <text x="100" y="100" text-anchor="middle" class="svg-label">Sala de sistemas</text>
+            <text x="100" y="120" text-anchor="middle" class="svg-small">Impresora compartida</text>
+          </g>
+          <g transform="translate(540,50)">
+            <rect width="200" height="180" rx="12" fill="#ffffff" stroke="#e2e2e2"/>
+            <circle cx="100" cy="50" r="26" fill="#333333"/>
+            <text x="100" y="100" text-anchor="middle" class="svg-label">Varias sedes</text>
+            <text x="100" y="120" text-anchor="middle" class="svg-small">Archivos unificados con DFS</text>
+          </g>
+        </svg>
+        <figcaption>Tres escenarios donde los servicios de archivos e impresión de Windows Server resuelven problemas cotidianos de organización.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== CONCLUSIONES ===== -->
+    <section class="content-section content-section--conclusion">
+      <span class="section-eyebrow">Conclusiones</span>
+      <h2>Ideas clave e importancia en la industria actual</h2>
+      <ul>
+        <li>Los servicios de archivos e impresión centralizan recursos que, de otro modo, estarían dispersos entre equipos individuales.</li>
+        <li>Los permisos combinados (recurso compartido + NTFS) son la base de la seguridad de la información en la red.</li>
+        <li>DFS permite escalar el almacenamiento entre varios servidores manteniendo una sola ruta de acceso.</li>
+        <li>La administración centralizada de impresoras ahorra costos y simplifica el soporte técnico.</li>
+      </ul>
+      <p>En la industria actual, estos servicios siguen siendo la base de la infraestructura de TI en muchas organizaciones, incluso con el auge de la nube: la mayoría de empresas medianas y grandes todavía dependen de un servidor de archivos local para información sensible, cumplimiento normativo o simplemente por costos de ancho de banda. Comprender su configuración y administración es una habilidad esencial para cualquier técnico en sistemas.</p>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 Derechos reservados · Gyoribeth Montenegro</p>
+  </footer>
+
+</body>
+</html>
